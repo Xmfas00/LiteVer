@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+build/
+
+# Local config (путь к SDK, специфично для твоего компа)
+local.properties
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+
+# Собранные бинарники и подпись
+*.apk
+*.aab
+*.ap_
+*.jks
+*.keystore
+
+# Native / captures
+.externalNativeBuild/
+.cxx/
+captures/
