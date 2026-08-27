@@ -71,6 +71,19 @@ object ShizukuRunner {
             if (ok) ctx.getString(R.string.joyose_restored) else null
         }
 
+    fun peakRefresh(ctx: Context, on: Boolean): ClearResult =
+        run(ctx, arrayOf("sh", "-c", "settings put system peak_refresh_rate " + if (on) "1" else "0")) { ok, _ ->
+            if (ok) ctx.getString(if (on) R.string.peak_enabled else R.string.peak_disabled) else null
+        }
+
+    fun peakRefreshEnabled(ctx: Context): Boolean? = try {
+        when (sh(arrayOf("sh", "-c", "settings get system peak_refresh_rate")).out.trim()) {
+            "1" -> true
+            "0" -> false
+            else -> null
+        }
+    } catch (_: Exception) { null }
+
     private fun run(
         ctx: Context,
         cmd: Array<String>,

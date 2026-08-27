@@ -15,7 +15,7 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        DynamicColors.applyToActivitiesIfAvailable(this) // Monet: цвета кнопок по обоям (Android 12+)
+        DynamicColors.applyToActivitiesIfAvailable(this)
         getSystemService(NotificationManager::class.java).createNotificationChannel(
             NotificationChannel(CHANNEL, getString(R.string.channel_name), NotificationManager.IMPORTANCE_HIGH)
         )

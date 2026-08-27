@@ -69,5 +69,15 @@
     <string name="risk_title">Risks and advice</string>
     <string name="risk_text">It does not hurt the hardware and does not break the phone: critical overheat protection is built into the kernel and works independently of Joyose.\n\nAdvice: do not play while the phone is charging and already hot. Let it cool down first and only then plug it in — the battery will live longer and throttling will not come back.\n\nEverything is at your own risk. Restoring Joyose and recreating PowerKeeper data are one tap away — nothing here is irreversible.</string>
     <string name="priv_title">Privacy</string>
-    <string name="priv_text">LiteVer does not collect or send any data. The app has no internet access, no analytics and no ads. Everything runs locally on your device through Shizuku (ADB‑shell rights): clearing PowerKeeper data and managing Joyose happen right on the phone and go nowhere.</string>
+    <string name="priv_text">LiteVer does not collect or send any data. The app has no internet access, no analytics and no ads. Everything runs locally on your device through Shizuku (ADB‑shell rights): clearing PowerKeeper data and managing Joyose happen right on the phone and go nowhere.<string name="peak_title">Peak refresh rate</string>
+    <string name="peak_on">On (system holds the maximum)</string>
+    <string name="peak_off">Off</string>
+    <string name="peak_title">Peak refresh rate</string>
+    <string name="peak_on">On (system holds the maximum)</string>
+    <string name="peak_off">Off</string>
+    <string name="peak_unknown">Unknown (connect Shizuku)</string>
+    <string name="peak_toggle">Toggle</string>
+    <string name="peak_enabled">Peak refresh rate enabled ✔</string>
+    <string name="peak_disabled">Peak refresh rate disabled ✔</string>
+    <string name="peak_working">Applying…</string></string>
 </resources>

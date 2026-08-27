@@ -70,4 +70,12 @@
     <string name="risk_text">На железо это не влияет и телефон не ломает: защита от критического перегрева вшита в ядро и работает независимо от Joyose.\n\nСовет: не играйте, пока телефон на зарядке и уже горячий. Дайте ему остыть и только потом подключайте к сети — так аккумулятор проживёт дольше, а троттлинг не вернётся.\n\nВсё на ваш страх и риск. Возврат Joyose и пересоздание данных PowerKeeper — в один тап, ничего необратимого здесь нет.</string>
     <string name="priv_title">Конфиденциальность</string>
     <string name="priv_text">LiteVer не собирает и не передаёт никаких данных. У приложения нет доступа в интернет, нет аналитики и нет рекламы. Всё выполняется локально на вашем устройстве через Shizuku (права ADB‑shell): очистка данных PowerKeeper и управление Joyose происходят прямо на телефоне и никуда не уходят.</string>
+    <string name="peak_title">Пиковая частота обновления</string>
+    <string name="peak_on">Включена (система держит максимум)</string>
+    <string name="peak_off">Выключена</string>
+    <string name="peak_unknown">Неизвестно (подключи Shizuku)</string>
+    <string name="peak_toggle">Переключить</string>
+    <string name="peak_enabled">Пиковая частота включена ✔</string>
+    <string name="peak_disabled">Пиковая частота выключена ✔</string>
+    <string name="peak_working">Применяю…</string>
 </resources>

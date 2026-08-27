@@ -112,6 +112,7 @@ class MainActivity : AppCompatActivity() {
                 .show()
         }
         b.btnRestoreJoyose.setOnClickListener { doJoyoseRestore() }
+        b.btnPeak.setOnClickListener { doPeakToggle() }
 
         showPage(0)
         updateStatus()
@@ -298,6 +299,8 @@ class MainActivity : AppCompatActivity() {
             b.tvResult.text = getString(R.string.not_found, ShizukuRunner.TARGET)
 
         updateJoyose(granted)
+        b.btnPeak.isEnabled = granted
+        updatePeak()
     }
 
     private fun updateJoyose(granted: Boolean) {
@@ -345,6 +348,26 @@ class MainActivity : AppCompatActivity() {
             val r = withContext(Dispatchers.IO) { ShizukuRunner.restoreJoyose(this@MainActivity) }
             b.tvJoyose.text = (if (r.success) "✔ " else "✖ ") + r.message
             updateJoyose(ShizukuRunner.running() && ShizukuRunner.granted())
+        }
+    }
+
+    private fun doPeakToggle() {
+        val target = ShizukuRunner.peakRefreshEnabled(this) != true
+        b.btnPeak.isEnabled = false
+        b.tvPeak.text = getString(R.string.peak_working)
+        lifecycleScope.launch {
+            val r = withContext(Dispatchers.IO) { ShizukuRunner.peakRefresh(this@MainActivity, target) }
+            b.tvPeak.text = (if (r.success) "✔ " else "✖ ") + r.message
+            updatePeak()
+            b.btnPeak.isEnabled = ShizukuRunner.running() && ShizukuRunner.granted()
+        }
+    }
+
+    private fun updatePeak() {
+        when (ShizukuRunner.peakRefreshEnabled(this)) {
+            true -> b.peakStatus.setText(R.string.peak_on)
+            false -> b.peakStatus.setText(R.string.peak_off)
+            null -> b.peakStatus.setText(R.string.peak_unknown)
         }
     }
 
