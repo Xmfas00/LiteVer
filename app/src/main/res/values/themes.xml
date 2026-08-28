@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.PkClear" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/amber</item>
+        <item name="colorOnPrimary">@color/text_dark</item>
+        <item name="colorSecondary">@color/amber</item>
+        <item name="colorOnSecondary">@color/text_dark</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:navigationBarColor">#000000</item>
+        <item name="android:windowBackground">@drawable/bg_main</item>
+    </style>
+</resources>
